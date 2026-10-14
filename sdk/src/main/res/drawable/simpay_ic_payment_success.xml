@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Paid confirmation mark: a rounded rotated square with a tick.
+
+    Colours are fixed rather than tinted, because the pale fill and the outline are
+    two different greens that together carry the "paid" meaning.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="88dp"
+    android:height="88dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!--
+        Pale backing diamond. The original artwork expresses it as a square rotated by
+        45 degrees around the centre; the equivalent explicit corners are used here
+        because VectorDrawable has no rect element.
+    -->
+    <path
+        android:pathData="M256,96L416,256L256,416L96,256Z"
+        android:fillColor="#D5FFE5" />
+
+    <!-- Rounded rotated square -->
+    <path
+        android:pathData="M35.932,193.136L193.137,35.931c34.575,-34.575 91.152,-34.575 125.727,0l157.204,157.204c34.575,34.575 34.575,91.153 0,125.728L318.864,476.068c-34.575,34.576 -91.152,34.576 -125.727,0L35.932,318.864C1.357,284.289 1.357,227.711 35.932,193.136z"
+        android:fillColor="#00000000"
+        android:strokeColor="#00D14F"
+        android:strokeWidth="20"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Tick -->
+    <path
+        android:pathData="M389.125,181.742L256,314.867L197.133,256"
+        android:fillColor="#00000000"
+        android:strokeColor="#00D14F"
+        android:strokeWidth="20"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>
+

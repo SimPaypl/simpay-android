@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Foreground layer of the adaptive icon: the SimPay mark.
+
+    The source artwork is 97x95. The group scales it to 62 units and centres it, which
+    keeps the whole mark inside the 72 unit safe zone every launcher mask respects.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.6392"
+        android:scaleY="0.6392"
+        android:translateX="23"
+        android:translateY="23.64">
+        <path
+            android:fillColor="#00D14F"
+            android:pathData="M96.5987,27.5919H0C0,12.2243 12.2056,0 27.5498,0H96.5987V27.5919V27.5919Z" />
+        <path
+            android:fillColor="#00D14F"
+            android:pathData="M96.5987,33.8787H0V61.4706H96.5987V33.8787Z" />
+        <path
+            android:fillColor="#00D14F"
+            android:pathData="M69.0489,95H0V67.4081H96.5987C96.5987,82.7757 84.3931,95 69.0489,95Z" />
+    </group>
+</vector>
+

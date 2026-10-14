@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Polish translation of the payment sheet.
+
+    Wording follows how Polish banking apps speak to the payer: second person plural
+    ("Potwierdź"), no anglicisms, and no claim that a payment is finished before the API
+    confirms it.
+-->
+<resources>
+
+    <!-- Summary header -->
+    <string name="simpay_recipient">Dane odbiorcy</string>
+    <string name="simpay_amount_due">Do zapłaty</string>
+    <string name="simpay_secure_note">Płatności są szyfrowane. Jesteś bezpieczny.</string>
+
+    <!-- Channel list -->
+    <string name="simpay_loading_channels">Wczytujemy metody płatności</string>
+    <string name="simpay_channels_empty">Brak dostępnych metod płatności</string>
+    <string name="simpay_choose_method">Wybierz metodę płatności</string>
+    <string name="simpay_blik_subtitle">Zapłać bez wychodzenia z aplikacji</string>
+
+    <string name="simpay_blik_title">Wprowadź kod BLIK</string>
+    <string name="simpay_blik_hint">Kod BLIK znajdziesz w aplikacji swojego banku.</string>
+    <string name="simpay_blik_new_payment">Kolejny kod rozpocznie nową płatność.</string>
+    <string name="simpay_blik_invalid_code">Podaj kod BLIK</string>
+    <string name="simpay_blik_rejected_code">Podano błędny kod BLIK. Spróbuj ponownie.</string>
+
+    <!-- Progress -->
+    <string name="simpay_preparing_payment">Przygotowujemy płatność</string>
+    <string name="simpay_sending_code">Wysyłamy kod</string>
+    <string name="simpay_awaiting_bank">Potwierdź płatność w aplikacji swojego banku</string>
+    <string name="simpay_awaiting_bank_detail">Czekamy na potwierdzenie.</string>
+    <string name="simpay_opening_page">Otwieramy stronę płatności</string>
+    <string name="simpay_checking_status">Sprawdzamy status płatności</string>
+
+    <!-- Outcomes -->
+    <string name="simpay_success_title">Płatność zakończona</string>
+    <string name="simpay_success_detail">Sklep potwierdzi Twoje zamówienie.</string>
+    <string name="simpay_pending_title">Płatność jest w trakcie realizacji</string>
+    <string name="simpay_pending_detail">Możesz zamknąć to okno. Sklep potwierdzi wynik płatności.</string>
+    <string name="simpay_verification_title">Weryfikujemy płatność</string>
+    <string name="simpay_verification_detail">Wynik potwierdzi sklep.</string>
+    <string name="simpay_expired_title">Płatność wygasła</string>
+    <string name="simpay_expired_detail">Rozpocznij płatność jeszcze raz.</string>
+    <string name="simpay_refunded_title">Płatność została zwrócona</string>
+    <string name="simpay_failure_title">Płatność nieudana</string>
+
+    <!-- Error explanations -->
+    <string name="simpay_error_no_internet">Brak połączenia z internetem.</string>
+    <string name="simpay_error_timeout">Przekroczono czas połączenia. Spróbuj ponownie.</string>
+    <string name="simpay_error_indeterminate">Nie możemy potwierdzić, czy żądanie dotarło. Sprawdź status płatności w sklepie.</string>
+    <string name="simpay_error_missing_payer_ip">Nie udało się przygotować płatności. Brakuje konfiguracji po stronie sklepu.</string>
+    <string name="simpay_error_missing_country">Nie udało się przygotować płatności. Brakuje konfiguracji kraju po stronie sklepu.</string>
+    <string name="simpay_error_rate_limited">Zbyt wiele prób. Odczekaj chwilę.</string>
+    <string name="simpay_error_browser_unavailable">Brak przeglądarki, która otworzy stronę płatności.</string>
+    <string name="simpay_error_transaction_not_found">Nie znaleziono transakcji.</string>
+    <!-- Session or channel list could not be obtained: the payer did nothing wrong. -->
+    <string name="simpay_error_unavailable">Płatności są chwilowo niedostępne. Spróbuj ponownie za chwilę.</string>
+    <string name="simpay_error_payment_declined">Płatność nieudana. Sprawdź powód w aplikacji bankowej i spróbuj ponownie.</string>
+    <string name="simpay_error_blik_rejected">Kilkakrotnie podano błędny kod BLIK. Rozpocznij płatność jeszcze raz.</string>
+    <string name="simpay_error_generic">Płatność nieudana. Spróbuj ponownie.</string>
+
+    <!-- Buttons -->
+    <string name="simpay_action_pay">Zapłać</string>
+    <string name="simpay_action_cancel">Anuluj</string>
+    <string name="simpay_action_close">Zamknij</string>
+    <string name="simpay_action_done">Gotowe</string>
+    <string name="simpay_action_try_again">Spróbuj ponownie</string>
+
+</resources>
+

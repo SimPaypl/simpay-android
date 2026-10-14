@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Default (English) strings of the payment sheet.
+
+    Every name is prefixed with "simpay_" so the library can never collide with the
+    integrating application's resources. Translations live in values-<lang>/strings.xml
+    and are picked by the system locale.
+-->
+<resources>
+
+    <!-- Summary header -->
+    <string name="simpay_recipient">Recipient</string>
+    <string name="simpay_amount_due">Amount due</string>
+    <string name="simpay_secure_note">Payments are encrypted. You are safe.</string>
+
+    <!-- Channel list -->
+    <string name="simpay_loading_channels">Loading payment methods</string>
+    <string name="simpay_channels_empty">No payment methods available</string>
+    <string name="simpay_choose_method">Choose a payment method</string>
+    <!-- Brand name, shown instead of the API name, which reads "BLIK Level 0". -->
+    <string name="simpay_blik_name" translatable="false">BLIK</string>
+    <string name="simpay_blik_subtitle">Pay without leaving the app</string>
+
+    <string name="simpay_blik_title">Enter the BLIK code</string>
+    <string name="simpay_blik_hint">You can find the BLIK code in your banking app.</string>
+    <string name="simpay_blik_new_payment">The next code starts a new payment.</string>
+    <string name="simpay_blik_invalid_code">Enter the BLIK code</string>
+    <string name="simpay_blik_rejected_code">Incorrect BLIK code was entered. Try again.</string>
+
+    <!-- Progress -->
+    <string name="simpay_preparing_payment">Preparing payment</string>
+    <string name="simpay_sending_code">Sending the code</string>
+    <string name="simpay_awaiting_bank">Confirm the payment in your banking app</string>
+    <string name="simpay_awaiting_bank_detail">We are waiting for confirmation.</string>
+    <string name="simpay_opening_page">Opening the payment page</string>
+    <string name="simpay_checking_status">Checking the payment status</string>
+
+    <!-- Outcomes -->
+    <string name="simpay_success_title">Payment completed</string>
+    <string name="simpay_success_detail">The store will confirm your order.</string>
+    <string name="simpay_pending_title">Payment is still processing</string>
+    <string name="simpay_pending_detail">You can close this window. The store will confirm the result.</string>
+    <string name="simpay_verification_title">Payment is being verified</string>
+    <string name="simpay_verification_detail">The result will be confirmed by the store.</string>
+    <string name="simpay_expired_title">Payment expired</string>
+    <string name="simpay_expired_detail">Start the payment again.</string>
+    <string name="simpay_refunded_title">Payment refunded</string>
+    <string name="simpay_failure_title">Payment failed</string>
+
+    <!-- Error explanations -->
+    <string name="simpay_error_no_internet">No internet connection.</string>
+    <string name="simpay_error_timeout">The connection timed out. Try again.</string>
+    <string name="simpay_error_indeterminate">We could not confirm whether the request was received. Check the payment status in the store.</string>
+    <string name="simpay_error_missing_payer_ip">The payment could not be prepared. Missing configuration from the merchant backend.</string>
+    <string name="simpay_error_missing_country">The payment could not be prepared. Missing country configuration from the store.</string>
+    <string name="simpay_error_rate_limited">Too many attempts. Please wait a moment.</string>
+    <string name="simpay_error_browser_unavailable">No browser is available to open the payment page.</string>
+    <string name="simpay_error_transaction_not_found">The transaction was not found.</string>
+    <!-- Session or channel list could not be obtained: the payer did nothing wrong. -->
+    <string name="simpay_error_unavailable">Payments are temporarily unavailable. Please try again later.</string>
+    <string name="simpay_error_payment_declined">Payment failed. Check the reason in the banking application and try again.</string>
+    <string name="simpay_error_blik_rejected">Incorrect BLIK code was entered several times. Start the payment again.</string>
+    <string name="simpay_error_generic">Payment failed. Try again.</string>
+
+    <!-- Buttons -->
+    <string name="simpay_action_pay">Pay</string>
+    <string name="simpay_action_cancel">Cancel</string>
+    <string name="simpay_action_close">Close</string>
+    <string name="simpay_action_done">Done</string>
+    <string name="simpay_action_try_again">Try again</string>
+
+</resources>
+

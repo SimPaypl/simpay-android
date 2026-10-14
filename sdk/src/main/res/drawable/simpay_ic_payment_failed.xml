@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Declined payment mark: a card with a cross badge.
+
+    Fixed colours rather than a tint, because the pale backing shapes and the red
+    outline are two separate values that together read as "declined".
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="88dp"
+    android:height="88dp"
+    android:viewportWidth="115"
+    android:viewportHeight="115">
+
+    <!-- Pale disc behind the card -->
+    <path
+        android:pathData="M56.3725,90.2014C67.5823,90.2014 76.6697,81.114 76.6697,69.9041C76.6697,58.6942 67.5823,49.6068 56.3725,49.6068C45.1626,49.6068 36.0752,58.6942 36.0752,69.9041C36.0752,81.114 45.1626,90.2014 56.3725,90.2014Z"
+        android:fillColor="#FFE9E9" />
+
+    <!-- Card outline -->
+    <path
+        android:pathData="M112.754,36.075V94.7117C112.754,97.2037 110.736,99.2221 108.243,99.2221H6.75647C4.26443,99.2221 2.24609,97.2037 2.24609,94.7117V45.0959C2.24609,42.6037 4.26443,40.5853 6.75647,40.5853C9.85968,40.5853 44.6472,40.5853 72.662,40.5853"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Inner frame -->
+    <path
+        android:pathData="M94.6289,56.2573C96.6789,59.0631 99.9941,60.8829 103.733,60.8829V78.9251C97.5066,78.9251 92.4571,83.9745 92.4571,90.2013H22.5439C22.5439,83.9745 17.4944,78.9251 11.2676,78.9251V60.8826C17.4944,60.8826 22.5439,55.8334 22.5439,49.6066H77.3288"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Currency sign -->
+    <path
+        android:pathData="M59.6884,62.5533C59.3227,62.1923 57.8014,60.8125 54.8925,61.6888C52.2217,62.4933 51.5582,66.1479 53.3733,67.5713C54.4154,68.3886 55.9837,69.0607 58.097,69.8077C62.8271,71.4797 61.0785,78.1504 56.2671,78.1823C54.3896,78.1951 53.5116,78.0756 51.8623,76.9966"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M56.2666,81.1803V78.1829"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M56.2666,61.4196V58.6277"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Cross badge -->
+    <path
+        android:pathData="M92.4567,58.6184C80.0261,58.6184 69.9131,48.5055 69.9131,36.075C69.9131,23.6444 80.0261,13.5316 92.4567,13.5316C104.887,13.5316 115,23.6447 115,36.075C115,48.5053 104.887,58.6184 92.4567,58.6184Z"
+        android:fillColor="#FFE9E9" />
+    <path
+        android:pathData="M84.4834,28.1016L100.43,44.0484"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M84.4834,44.0484L100.43,28.1016"
+        android:fillColor="#00000000"
+        android:strokeColor="#EF4444"
+        android:strokeWidth="4.49219"
+        android:strokeMiterLimit="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>
+

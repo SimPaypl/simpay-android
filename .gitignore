@@ -1,0 +1,33 @@
+*.iml
+.gradle
+
+# Gradle / Android build outputs
+**/build/
+**/build/reports/
+**/build/intermediates/
+**/out/
+/captures/
+**/captures/
+.externalNativeBuild/
+**/.externalNativeBuild/
+.cxx/
+**/.cxx/
+*.hprof
+
+# IDE state. It records local paths, the selected device and plugin state, which
+# differ per developer and only produce conflicts.
+/.idea
+**/.idea/
+
+/local.properties
+**/local.properties
+.DS_Store
+
+# Kotlin build session data, recreated on every build.
+.kotlin
+**/.kotlin/
+
+# Heap dumps produced by a crashing Gradle daemon; they can contain credentials
+# read during configuration.
+*.hprof
+
