@@ -10,6 +10,7 @@ import pl.simpay.android.checkout.mobile.PaymentChannel
 import pl.simpay.android.checkout.mobile.SimPayApiException
 import pl.simpay.android.checkout.mobile.TransactionId
 import pl.simpay.android.checkout.mobile.TransactionSnapshot
+import java.net.URI
 import pl.simpay.android.checkout.mobile.TransactionStatus
 
 /**
@@ -46,10 +47,10 @@ internal object MobileSdkResponseParser {
                 message = "Transaction response is missing a valid transactionId"
             )
 
-        val redirectUrl = data.optString("redirectUrl").orNullIfBlank()
+        val redirectUrl = data.optString("redirectUrl").orNullIfBlank()?.takeIf(::isSafeRedirectUrl)
             ?: throw SimPayApiException(
                 error = MobileCheckoutError.InvalidResponse,
-                message = "Transaction response is missing redirectUrl"
+                message = "Transaction response is missing an https redirectUrl"
             )
 
         return CreatedTransaction(transactionId = transactionId, redirectUrl = redirectUrl)
@@ -164,6 +165,14 @@ internal object MobileSdkResponseParser {
                 cause = exception
             )
         }
+    }
+
+    /** The payment page must be `https` with a host and no embedded credentials. */
+    private fun isSafeRedirectUrl(url: String): Boolean {
+        val uri = runCatching { URI(url) }.getOrNull() ?: return false
+        return uri.scheme.equals("https", ignoreCase = true) &&
+            !uri.host.isNullOrEmpty() &&
+            uri.rawUserInfo == null
     }
 
     private fun String?.orNullIfBlank(): String? =
