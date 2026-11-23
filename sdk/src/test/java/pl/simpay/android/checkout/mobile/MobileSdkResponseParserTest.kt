@@ -95,6 +95,34 @@ class MobileSdkResponseParserTest {
     }
 
     @Test
+    fun `a transaction response accepts an https redirect url`() {
+        val created = MobileSdkResponseParser.parseCreatedTransaction(
+            """{"success":true,"data":{"transactionId":"11111111-2222-3333-4444-555555555555","redirectUrl":"https://pay.simpay.pl/11111111-2222-3333-4444-555555555555"}}"""
+        )
+
+        assertEquals("https://pay.simpay.pl/11111111-2222-3333-4444-555555555555", created.redirectUrl)
+    }
+
+    @Test
+    fun `a transaction response with a non https redirect url maps to invalid response`() {
+        listOf(
+            "http://pay.simpay.pl/x",
+            "intent://pay#Intent;scheme=https;package=com.example;end",
+            "javascript:alert(1)",
+            "https://user:pass@pay.simpay.pl/x",
+            "https:///x",
+        ).forEach { url ->
+            val exception = runCatching {
+                MobileSdkResponseParser.parseCreatedTransaction(
+                    """{"success":true,"data":{"transactionId":"11111111-2222-3333-4444-555555555555","redirectUrl":"$url"}}"""
+                )
+            }.exceptionOrNull() as? SimPayApiException
+
+            assertEquals(url, MobileCheckoutError.InvalidResponse, exception?.error)
+        }
+    }
+
+    @Test
     fun `malformed body maps to invalid response`() {
         val exception = runCatching {
             MobileSdkResponseParser.parseChannels("not-json")
